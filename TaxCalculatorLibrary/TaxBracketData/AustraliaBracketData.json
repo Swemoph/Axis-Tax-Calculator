@@ -25,7 +25,7 @@
   },
   {
     "LowerIncomeBound": 180001,
-    "UpperIncomeBound": 1000000000,
+    "UpperIncomeBound": 100000000000,
     "Percentage": 0.45,
     "PreviousBracketMax": 51667
   }
