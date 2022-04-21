@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using TaxCalculatorConsoleApp.Contracts;
+using TaxCalculatorConsoleApp.Services;
 using TaxCalculatorLibrary.Contracts;
 using TaxCalculatorLibrary.Services;
 
@@ -8,6 +10,7 @@ namespace TaxCalculatorConsoleApp
     class Program
     {
         private static ITaxCalculator TaxCalculator { get; set; }
+        private static IValidator Validator { get; set; }
         private const string Culture = "en-au";
         
         public static void Main(string[] args)
@@ -16,7 +19,7 @@ namespace TaxCalculatorConsoleApp
 
             var userInput = GetUserInput();
 
-            while (!IsValidInput(userInput))
+            while (!Validator.ValidateStringDouble(userInput))
             {
                 Console.WriteLine("Please enter a valid positive number");
                 userInput = GetUserInput();
@@ -37,17 +40,13 @@ namespace TaxCalculatorConsoleApp
             var userInput = Console.ReadLine();
             return userInput;
         }
-
-        private static bool IsValidInput(string input)
-        {
-            return double.TryParse(input, out var result) && result >= 0;
-        }
-
+        
         private static void SetupServices()
         {
             IData dataSource = new FileDataService();
             ITaxBrackets tb = new TaxBracketsService(dataSource);
             TaxCalculator = new TaxCalculatorService(tb);
+            Validator = new ValidatorService();
         }
 
         private static string FormatCurrency(double result)
