@@ -7,7 +7,6 @@
   <ItemGroup>
     <None Remove="Contracts\" />
     <None Remove="Models\" />
-    <None Remove="Properties\" />
     <None Remove="Services\" />
     <None Remove="TaxBracketData\AustraliaBracketData.json" />
     <None Remove="TaxBracketData\" />
@@ -16,7 +15,6 @@
   <ItemGroup>
     <Folder Include="Contracts\" />
     <Folder Include="Models\" />
-    <Folder Include="Properties\" />
     <Folder Include="Services\" />
     <Folder Include="TaxBracketData\" />
   </ItemGroup>
