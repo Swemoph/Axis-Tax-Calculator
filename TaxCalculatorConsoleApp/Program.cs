@@ -3,18 +3,18 @@ using System.Globalization;
 using TaxCalculatorLib.Contracts;
 using TaxCalculatorLib.Services;
 
-namespace AxisTaxCalculator
+namespace TaxCalculatorConsoleApp
 {
-    class MainClass
+    class Program
     {
         private static ITaxCalculator TaxCalculator { get; set; }
-        
+
         public static void Main(string[] args)
         {
             SetupServices();
 
             var userInput = GetUserInput();
-            
+
             while (!IsValidInput(userInput))
             {
                 Console.WriteLine("Please enter a valid positive number");
@@ -22,7 +22,7 @@ namespace AxisTaxCalculator
             }
 
             var grossIncome = Convert.ToDouble(userInput);
-            
+
             var calculationResult = TaxCalculator.CalculateAnnualTax(grossIncome);
 
             Console.WriteLine(calculationResult.WasError
@@ -51,7 +51,7 @@ namespace AxisTaxCalculator
 
         private static string FormatCurrency(double result)
         {
-            return result.ToString("C",CultureInfo.CurrentCulture);
+            return result.ToString("C", CultureInfo.CurrentCulture);
         }
     }
 }

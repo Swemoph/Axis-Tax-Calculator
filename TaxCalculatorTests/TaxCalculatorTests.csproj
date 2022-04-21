@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TaxCalculatorLibrary\TaxCalculatorLibrary.csproj" />
       <ProjectReference Include="..\TaxCalculatorLib\TaxCalculatorLib.csproj" />
     </ItemGroup>
 
