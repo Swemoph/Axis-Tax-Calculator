@@ -79,9 +79,16 @@ namespace TaxCalculatorUnitTests
         }
         
         [TestMethod]
-        public void TestNegativeNumberReturnsError()
+        public void TestOutOfBoundsNegativeReturnsError()
         {
             var bracketResult = _taxCalculatorService.CalculateAnnualTax(-100);
+            Assert.IsTrue(bracketResult.WasError);
+        }
+        
+        [TestMethod]
+        public void TestOutOfBoundsReturnsError()
+        {
+            var bracketResult = _taxCalculatorService.CalculateAnnualTax(1000000);
             Assert.IsTrue(bracketResult.WasError);
         }
     }
