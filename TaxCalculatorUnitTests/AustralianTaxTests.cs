@@ -117,6 +117,13 @@ namespace TaxCalculatorUnitTests
             var bracketResult = _taxCalculatorService.CalculateAnnualTax(450000);
             Assert.AreEqual(173167.00, bracketResult.Result);
         }
+        
+        [TestMethod]
+        public void TestHugeIncome()
+        {
+            var bracketResult = _taxCalculatorService.CalculateAnnualTax(200000000);
+            Assert.AreEqual(89970667.00, bracketResult.Result);
+        }
     }
 }
 
