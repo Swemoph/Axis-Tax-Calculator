@@ -19,14 +19,17 @@ namespace TaxCalculatorConsoleApp
 
             var userInput = GetUserInput();
 
+            // validate user input, if invalid tell the user and reprompt
             while (!Validator.ValidateStringDouble(userInput))
             {
                 Console.WriteLine("Please enter a valid positive number");
                 userInput = GetUserInput();
             }
 
+            // once we know input is valid perform conversion
             var grossIncome = Convert.ToDouble(userInput);
 
+            // Calculate tax payable
             var calculationResult = TaxCalculator.CalculateAnnualTax(grossIncome);
 
             Console.WriteLine(calculationResult.WasError

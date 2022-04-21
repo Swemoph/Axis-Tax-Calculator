@@ -19,6 +19,7 @@ namespace TaxCalculatorLibrary.Services
         {
             try
             {
+                // get the correct bracket for incoming tax amount
                 var targetBracket = TaxBrackets.SingleOrDefault(bracket =>
                     grossIncome >= bracket.LowerIncomeBound && grossIncome <= bracket.UpperIncomeBound);
 
