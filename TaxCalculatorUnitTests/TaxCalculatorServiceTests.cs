@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using TaxCalculatorLib.Contracts;
-using TaxCalculatorLib.Models;
-using TaxCalculatorLib.Services;
+using TaxCalculatorLibrary.Contracts;
+using TaxCalculatorLibrary.Models;
+using TaxCalculatorLibrary.Services;
 
-namespace TaxCalculatorTests
+namespace TaxCalculatorUnitTests
 {
     
     [TestClass]

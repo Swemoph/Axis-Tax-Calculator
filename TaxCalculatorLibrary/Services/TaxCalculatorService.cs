@@ -1,8 +1,7 @@
-﻿using System;
-using TaxCalculatorLib.Contracts;
-using TaxCalculatorLib.Models;
+﻿using TaxCalculatorLibrary.Contracts;
+using TaxCalculatorLibrary.Models;
 
-namespace TaxCalculatorLib.Services
+namespace TaxCalculatorLibrary.Services
 {
     public class TaxCalculatorService : ITaxCalculator
     {

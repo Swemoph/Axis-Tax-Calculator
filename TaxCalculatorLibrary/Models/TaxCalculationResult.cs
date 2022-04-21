@@ -1,4 +1,4 @@
-namespace TaxCalculatorLib.Models
+namespace TaxCalculatorLibrary.Models
 {
     public class TaxCalculationResult
     {

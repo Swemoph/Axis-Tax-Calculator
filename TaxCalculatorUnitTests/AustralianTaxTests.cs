@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TaxCalculatorLib.Contracts;
-using TaxCalculatorLib.Services;
+using TaxCalculatorLibrary.Contracts;
+using TaxCalculatorLibrary.Services;
 
-namespace TaxCalculatorTests
+namespace TaxCalculatorUnitTests
 {
     /// <summary>
     /// These unit tests will run the app as the console application itself does - i.e. reading from the data source

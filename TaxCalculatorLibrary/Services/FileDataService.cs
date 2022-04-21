@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using TaxCalculatorLib.Contracts;
-using TaxCalculatorLib.Models;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
+using TaxCalculatorLibrary.Contracts;
+using TaxCalculatorLibrary.Models;
 
-namespace TaxCalculatorLib.Services
+namespace TaxCalculatorLibrary.Services
 {
     public class FileDataService : IData
     {

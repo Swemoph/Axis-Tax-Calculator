@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
-using TaxCalculatorLib.Contracts;
-using TaxCalculatorLib.Services;
+using TaxCalculatorLibrary.Contracts;
+using TaxCalculatorLibrary.Services;
 
 namespace TaxCalculatorConsoleApp
 {

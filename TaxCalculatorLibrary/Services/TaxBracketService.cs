@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TaxCalculatorLib.Contracts;
-using TaxCalculatorLib.Models;
+using TaxCalculatorLibrary.Contracts;
+using TaxCalculatorLibrary.Models;
 
-namespace TaxCalculatorLib.Services
+namespace TaxCalculatorLibrary.Services
 {
     public class TaxBracketsService : ITaxBrackets
     {

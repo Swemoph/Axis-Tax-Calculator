@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using TaxCalculatorLib.Models;
+using TaxCalculatorLibrary.Models;
 
-namespace TaxCalculatorLib.Contracts
+namespace TaxCalculatorLibrary.Contracts
 {
     /// <summary>
     /// Interface for accessing data.

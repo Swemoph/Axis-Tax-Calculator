@@ -1,6 +1,6 @@
-﻿using TaxCalculatorLib.Models;
+﻿using TaxCalculatorLibrary.Models;
 
-namespace TaxCalculatorLib.Contracts
+namespace TaxCalculatorLibrary.Contracts
 {
     public interface ITaxCalculator
     {

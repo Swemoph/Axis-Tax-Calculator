@@ -1,5 +1,4 @@
-﻿using System;
-namespace TaxCalculatorLib.Models
+﻿namespace TaxCalculatorLibrary.Models
 {
     public class TaxBracket
     {
