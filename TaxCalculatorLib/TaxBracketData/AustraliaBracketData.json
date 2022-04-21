@@ -1,0 +1,32 @@
+[
+  {
+    "LowerIncomeBound": 0,
+    "UpperIncomeBound": 18200,
+    "Percentage": 0,
+    "PreviousBracketMax": 0
+  },
+  {
+    "LowerIncomeBound": 18201,
+    "UpperIncomeBound": 45000,
+    "Percentage": 0.19,
+    "PreviousBracketMax": 0
+  },
+  {
+    "LowerIncomeBound": 45001,
+    "UpperIncomeBound": 120000,
+    "Percentage": 0.325,
+    "PreviousBracketMax": 5092
+  },
+  {
+    "LowerIncomeBound": 120001,
+    "UpperIncomeBound": 180000,
+    "Percentage": 0.37,
+    "PreviousBracketMax": 29467
+  },
+  {
+    "LowerIncomeBound": 180001,
+    "UpperIncomeBound": 1000000000,
+    "Percentage": 0.45,
+    "PreviousBracketMax": 51667
+  }
+]

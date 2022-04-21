@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using TaxCalculatorLib.Contracts;
+using TaxCalculatorLib.Models;
+
+namespace TaxCalculatorLib.Services
+{
+    public class TaxBracketsService : ITaxBrackets
+    {
+        private List<TaxBracket> TaxBrackets { get; set; }
+
+        public TaxBracketsService(IData dataService)
+        {
+            TaxBrackets = dataService.GetTaxBrackets();
+        }
+        
+        public TaxBracket GetBracketForIncome(double grossIncome)
+        {
+            try
+            {
+                var targetBracket = TaxBrackets.SingleOrDefault(bracket =>
+                    grossIncome >= bracket.LowerIncomeBound && grossIncome <= bracket.UpperIncomeBound);
+
+                return targetBracket;
+            }
+            catch (InvalidOperationException) /* Catch exception if multiple brackets are found. */
+            {
+                // return null value which will cause calculation error.
+                return null;
+            }
+        }
+    }
+}
