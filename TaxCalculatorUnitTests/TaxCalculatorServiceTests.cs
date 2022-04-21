@@ -59,7 +59,7 @@ namespace TaxCalculatorUnitTests
                 bracketService.GetBracketForIncome(150)).Returns(b2);
             
             mockBracketService.Setup(bracketService =>
-                bracketService.GetBracketForIncome(250)).Returns(b2);
+                bracketService.GetBracketForIncome(250)).Returns(b3);
             
             return mockBracketService.Object;
         }
@@ -76,6 +76,13 @@ namespace TaxCalculatorUnitTests
         {
             var bracketResult = _taxCalculatorService.CalculateAnnualTax(150);
             Assert.AreEqual(7.5,bracketResult.Result);
+        }
+        
+        [TestMethod]
+        public void Test20PercentThirdBracket()
+        {
+            var bracketResult = _taxCalculatorService.CalculateAnnualTax(250);
+            Assert.AreEqual(25,bracketResult.Result);
         }
         
         [TestMethod]
