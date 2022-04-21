@@ -8,7 +8,8 @@ namespace TaxCalculatorConsoleApp
     class Program
     {
         private static ITaxCalculator TaxCalculator { get; set; }
-
+        private const string Culture = "en-au";
+        
         public static void Main(string[] args)
         {
             SetupServices();
@@ -51,7 +52,7 @@ namespace TaxCalculatorConsoleApp
 
         private static string FormatCurrency(double result)
         {
-            return result.ToString("C", CultureInfo.CurrentCulture);
+            return result.ToString("C", CultureInfo.GetCultureInfo(Culture));
         }
     }
 }
