@@ -18,9 +18,8 @@ namespace TaxCalculatorLibrary.Services
             var targetBracket = _taxBracketsService.GetBracketForIncome(grossIncome);
             if (targetBracket == null) return TaxCalculationResult.CreateErrorResult();
 
-            /* due to the way the brackets work we want to subtract one from the lower income bound so that
-               on calculation, the first dollar over the lower bound is taken into account. However, if on the bottom
-               bracket we don't want to do this as it will lead to a negative lower bound.*/
+            /* This minus one logic is to deal with non-continuous bands. Lets have a chat around
+             why this is here. */
             var lowerBound = targetBracket.LowerIncomeBound == 0
                 ? targetBracket.LowerIncomeBound
                 : targetBracket.LowerIncomeBound - 1;
